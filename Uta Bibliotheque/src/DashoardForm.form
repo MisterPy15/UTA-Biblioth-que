@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="DashoardForm">
+  <grid id="27dc6" binding="dashboardPanel" layout-manager="GridLayoutManager" row-count="2" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="0" left="0" bottom="0" right="0"/>
+    <constraints>
+      <xy x="20" y="20" width="1412" height="934"/>
+    </constraints>
+    <properties/>
+    <border type="none"/>
+    <children>
+      <grid id="cfd03" layout-manager="GridLayoutManager" row-count="8" column-count="5" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="10" left="10" bottom="10" right="10"/>
+        <constraints>
+          <grid row="0" column="0" row-span="2" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-15263977"/>
+        </properties>
+        <clientProperties>
+          <html.disable class="java.lang.Boolean" value="false"/>
+        </clientProperties>
+        <border type="none"/>
+        <children>
+          <component id="efe96" class="javax.swing.JButton" binding="btnAdherent">
+            <constraints>
+              <grid row="2" column="1" row-span="1" col-span="3" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <autoscrolls value="false"/>
+              <background color="-15263977"/>
+              <borderPainted value="false"/>
+              <contentAreaFilled value="false"/>
+              <font name="Geneva" size="20" style="1"/>
+              <foreground color="-1445633"/>
+              <text value="Gestion Adhérents"/>
+            </properties>
+          </component>
+          <component id="8e926" class="javax.swing.JButton" binding="btnReservations">
+            <constraints>
+              <grid row="3" column="1" row-span="1" col-span="3" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <autoscrolls value="false"/>
+              <background color="-15263977"/>
+              <borderPainted value="false"/>
+              <contentAreaFilled value="false"/>
+              <font name="Geneva" size="20" style="1"/>
+              <foreground color="-1445633"/>
+              <text value="Gestions Reservations"/>
+            </properties>
+          </component>
+          <component id="888a7" class="javax.swing.JButton" binding="btnEmprunt">
+            <constraints>
+              <grid row="4" column="1" row-span="1" col-span="3" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <autoscrolls value="false"/>
+              <background color="-15263977"/>
+              <borderPainted value="false"/>
+              <contentAreaFilled value="false"/>
+              <font name="Geneva" size="20" style="1"/>
+              <foreground color="-1445633"/>
+              <text value="Gestion Emrpunts"/>
+            </properties>
+          </component>
+          <component id="2af6b" class="javax.swing.JButton" binding="btnStock">
+            <constraints>
+              <grid row="5" column="1" row-span="1" col-span="3" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <autoscrolls value="false"/>
+              <background color="-15263977"/>
+              <borderPainted value="false"/>
+              <contentAreaFilled value="false"/>
+              <font name="Geneva" size="20" style="1"/>
+              <foreground color="-1445633"/>
+              <text value="Gestion Stock"/>
+            </properties>
+          </component>
+          <component id="f6e67" class="javax.swing.JButton" binding="btnLivre">
+            <constraints>
+              <grid row="6" column="1" row-span="1" col-span="3" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <autoscrolls value="false"/>
+              <background color="-15263977"/>
+              <borderPainted value="false"/>
+              <contentAreaFilled value="false"/>
+              <font name="Geneva" size="20" style="1"/>
+              <foreground color="-1445633"/>
+              <text value="Gestion Livres"/>
+            </properties>
+          </component>
+          <component id="4e42f" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <icon value="stock-exchange.png"/>
+              <text value=""/>
+            </properties>
+          </component>
+          <component id="a0455" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <doubleBuffered value="true"/>
+              <enabled value="true"/>
+              <icon value="group.png"/>
+              <text value=""/>
+            </properties>
+          </component>
+          <component id="f17db" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <icon value="reserve.png"/>
+              <text value=""/>
+            </properties>
+          </component>
+          <component id="c6e07" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <icon value="Emprunt.png"/>
+              <text value=""/>
+            </properties>
+          </component>
+          <component id="7b384" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <icon value="education.png"/>
+              <text value=""/>
+            </properties>
+          </component>
+          <component id="3b0bb" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <icon value="book.png"/>
+              <text value=""/>
+            </properties>
+          </component>
+          <component id="85923" class="javax.swing.JButton" binding="btnDeconnection">
+            <constraints>
+              <grid row="7" column="1" row-span="1" col-span="3" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <autoscrolls value="false"/>
+              <background color="-15263977"/>
+              <borderPainted value="false"/>
+              <contentAreaFilled value="false"/>
+              <font name="Geneva" size="20" style="1"/>
+              <foreground color="-1445633"/>
+              <text value="Déconnection"/>
+            </properties>
+          </component>
+          <component id="1ea43" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="7" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <icon value="se-deconnecter.png"/>
+              <text value=""/>
+            </properties>
+          </component>
+          <component id="74835" class="javax.swing.JLabel" binding="lbAdmin">
+            <constraints>
+              <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <focusCycleRoot value="true"/>
+              <focusTraversalPolicyProvider value="true"/>
+              <font name="Monaco" size="22" style="1"/>
+              <foreground color="-1445633"/>
+              <icon value="homme.png"/>
+              <opaque value="false"/>
+              <text value="User"/>
+            </properties>
+          </component>
+          <component id="4e250" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-15263977"/>
+              <font name="Geneva" size="28" style="1"/>
+              <foreground color="-1445633"/>
+              <text value="Dashboard"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+      <grid id="dcb70" layout-manager="GridLayoutManager" row-count="3" column-count="6" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="10" left="10" bottom="10" right="10"/>
+        <constraints>
+          <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <component id="92bf4" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <icon value="book.png"/>
+              <text value=""/>
+            </properties>
+          </component>
+          <component id="76876" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <icon value="group.png"/>
+              <text value=""/>
+            </properties>
+          </component>
+          <component id="74663" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <icon value="reserve.png"/>
+              <text value=""/>
+            </properties>
+          </component>
+          <component id="5302c" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <icon value="Emprunt.png"/>
+              <text value=""/>
+            </properties>
+          </component>
+          <component id="4c587" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="0" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <icon value="check-mark.png"/>
+              <text value=""/>
+            </properties>
+          </component>
+          <component id="779bb" class="javax.swing.JLabel" binding="lbNbrLivre">
+            <constraints>
+              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="Nombre de livre : 0"/>
+            </properties>
+          </component>
+          <component id="5a530" class="javax.swing.JLabel" binding="lbNbrAdherent">
+            <constraints>
+              <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="Nombre D'adhérents: 0"/>
+            </properties>
+          </component>
+          <component id="c2d43" class="javax.swing.JLabel" binding="lblNbrreserve">
+            <constraints>
+              <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="Livre Réservation: 0"/>
+            </properties>
+          </component>
+          <component id="e2a54" class="javax.swing.JLabel" binding="lbNbrEmprunt">
+            <constraints>
+              <grid row="1" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="Livre Emprunté : 0"/>
+            </properties>
+          </component>
+          <component id="70289" class="javax.swing.JLabel" binding="lbNbrRetour">
+            <constraints>
+              <grid row="1" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="Livre retourné : 0"/>
+            </properties>
+          </component>
+          <component id="37772" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="0" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <icon value="close.png"/>
+              <text value=""/>
+            </properties>
+          </component>
+          <component id="5a575" class="javax.swing.JLabel" binding="lblNbrNonRetour">
+            <constraints>
+              <grid row="1" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="Livre non retourné: 0"/>
+            </properties>
+          </component>
+          <grid id="f4e93" binding="chartPanel" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints>
+              <grid row="2" column="0" row-span="1" col-span="6" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties/>
+            <border type="none"/>
+            <children/>
+          </grid>
+        </children>
+      </grid>
+      <component id="84a3" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <icon value="Logo UTA biblio.png"/>
+          <text value=""/>
+        </properties>
+      </component>
+    </children>
+  </grid>
+</form>

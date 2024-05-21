@@ -4,7 +4,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.*;
 
-public class RegisterForm extends JDialog{
+public class RegisterForm extends JDialog {
     private JTextField tfName;
     private JTextField tfFirstname;
     private JTextField tfAdresse;
@@ -15,23 +15,24 @@ public class RegisterForm extends JDialog{
     private JButton btnRegister;
     private JButton btnConnection;
     private JPanel registerPanel;
+    public User user;
 
-
-    public RegisterForm(JFrame parent){
+    public RegisterForm(JFrame parent) {
         super(parent);
         setTitle("Créé Un Compte");
         setContentPane(registerPanel);
         setMinimumSize(new Dimension(825, 660));
         setModal(true);
         setLocationRelativeTo(parent);
-
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+
         btnRegister.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                RegisterUser();
+                RegisterUser(parent);
             }
         });
+
         btnConnection.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -43,65 +44,58 @@ public class RegisterForm extends JDialog{
         setVisible(true);
     }
 
-    private void RegisterUser() {
+    private void RegisterUser(JFrame parent) {
         String nom = tfName.getText();
         String prenom = tfFirstname.getText();
         String adresse = tfAdresse.getText();
         String numero = tfNumero.getText();
         String mail = tfEmail.getText();
         String password = String.valueOf(pfPassword.getPassword());
-        String ConfirmPassword = String.valueOf(pfConfirmPassword.getPassword());
+        String confirmPassword = String.valueOf(pfConfirmPassword.getPassword());
 
-
-        if (nom.isEmpty()|| prenom.isEmpty() || adresse.isEmpty() || numero.isEmpty() || mail.isEmpty() || password.isEmpty() || ConfirmPassword.isEmpty()){
-
-            JOptionPane.showMessageDialog(this,
-                                        "Svp Remplissez Tout les Champs",
-                                        "Attention", JOptionPane.ERROR_MESSAGE);
+        if (nom.isEmpty() || prenom.isEmpty() || adresse.isEmpty() || numero.isEmpty() || mail.isEmpty() || password.isEmpty() || confirmPassword.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Svp Remplissez Tout les Champs", "Attention", JOptionPane.ERROR_MESSAGE);
             return;
         }
-        if (!password.equals(ConfirmPassword)){
 
-            JOptionPane.showMessageDialog(this,
-                    "Les Mots de passe ne correcpondent pas",
-                    "Attention", JOptionPane.ERROR_MESSAGE);
+        if (!password.equals(confirmPassword)) {
+            JOptionPane.showMessageDialog(this, "Les Mots de passe ne correcpondent pas", "Attention", JOptionPane.ERROR_MESSAGE);
             return;
         }
 
         user = addUserToDatabase(nom, prenom, adresse, numero, mail, password);
 
-        if(user != null){
+        if (user != null) {
+            JOptionPane.showMessageDialog(this, "Inscription Réussis", "Succès", JOptionPane.INFORMATION_MESSAGE);
             dispose();
-        }else {
-            JOptionPane.showMessageDialog(this,
-                    "Echec de l'inscription",
-                    "Attention", JOptionPane.ERROR_MESSAGE);
+            new DashoardForm();
+        } else {
+            JOptionPane.showMessageDialog(this, "Echec de l'inscription", "Attention", JOptionPane.ERROR_MESSAGE);
         }
     }
 
-    public User user;
-    private User addUserToDatabase(String nom, String prenom, String adresse, String numero, String mail, String password){
+    private User addUserToDatabase(String nom, String prenom, String adresse, String numero, String mail, String password) {
         User user = null;
-
-        final String DB_URL = "jdbc:mysql://localhost/UTA_Bibliotheque?serverTimeZone=UTC";
+        final String DB_URL = "jdbc:mysql://localhost/UTA_Bibliotheque?serverTimezone=UTC";
         final String USERNAME = "root";
         final String PASSWORD = "";
 
+        Connection conn = null;
+        PreparedStatement preparedStatement = null;
 
         try {
-            Connection conn = DriverManager.getConnection(DB_URL, USERNAME, PASSWORD);
-            Statement stmt = conn.createStatement();
-            String sql = "INSERT INTO administrateur(Nom, Prénom, Adresse, Numéro, Mail, Mot_de_Passe)" + "VALUES(?, ?, ?, ?, ?, ?)";
-            PreparedStatement prepareStatement = conn.prepareStatement(sql);
-            prepareStatement.setString(1, nom);
-            prepareStatement.setString(2, prenom);
-            prepareStatement.setString(3, adresse);
-            prepareStatement.setString(4, numero);
-            prepareStatement.setString(5, mail);
-            prepareStatement.setString(6, password);
+            conn = DriverManager.getConnection(DB_URL, USERNAME, PASSWORD);
+            String sql = "INSERT INTO administrateur (Nom, Prénom, Adresse, Numéro, Mail, Mot_de_Passe) VALUES (?, ?, ?, ?, ?, ?)";
+            preparedStatement = conn.prepareStatement(sql);
+            preparedStatement.setString(1, nom);
+            preparedStatement.setString(2, prenom);
+            preparedStatement.setString(3, adresse);
+            preparedStatement.setString(4, numero);
+            preparedStatement.setString(5, mail);
+            preparedStatement.setString(6, password);
 
-            int addedRows = prepareStatement.executeUpdate();
-            if (addedRows > 0){
+            int addedRows = preparedStatement.executeUpdate();
+            if (addedRows > 0) {
                 user = new User();
                 user.nom = nom;
                 user.prenom = prenom;
@@ -110,29 +104,16 @@ public class RegisterForm extends JDialog{
                 user.Mail = mail;
                 user.motDePasse = password;
             }
-
-            stmt.close();
-            conn.close();
-
-        } catch (Exception e) {
+        } catch (SQLException e) {
             e.printStackTrace();
+        } finally {
+            try {
+                if (preparedStatement != null) preparedStatement.close();
+                if (conn != null) conn.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
         }
-
         return user;
     }
-
-
-
-
-//    public static void main(String[] args) {
-//        RegisterForm myForm = new RegisterForm(null);
-//        User user = myForm.user;
-//        myForm.setLocationRelativeTo(null);
-//
-//        if (user != null){
-//            JOptionPane.showMessageDialog(myForm,
-//                    "Enregistrement réussi ✅ \n" + user.nom + " " + user.prenom,
-//                    "Succès", JOptionPane.ERROR_MESSAGE);
-//        }
-//    }
 }

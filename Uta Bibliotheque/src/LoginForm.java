@@ -10,6 +10,7 @@ public class LoginForm extends JDialog {
     private JButton connectionButton;
     private JButton btnInscription;
     private JPanel loginPanel;
+    public User user;
 
     public LoginForm(JFrame parent) {
         super(parent);
@@ -34,6 +35,7 @@ public class LoginForm extends JDialog {
                             "Succès",
                             JOptionPane.INFORMATION_MESSAGE);
                     dispose();
+                    new DashoardForm(user); // Passer l'utilisateur authentifié au Dashboard
                 } else {
                     JOptionPane.showMessageDialog(LoginForm.this,
                             "Email ou mot de passe incorrect",
@@ -53,8 +55,6 @@ public class LoginForm extends JDialog {
 
         setVisible(true);
     }
-
-    public User user;
 
     private User getAuthentificateUser(String email, String password) {
         User user = null;
@@ -98,5 +98,3 @@ public class LoginForm extends JDialog {
         });
     }
 }
-
-
