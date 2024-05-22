@@ -78,6 +78,7 @@ public class LoginForm extends JDialog {
                         user.numero = resultSet.getString("Numéro");
                         user.Mail = resultSet.getString("Mail");
                         user.motDePasse = resultSet.getString("Mot_de_Passe");
+                        user.photoPath = resultSet.getString("Photo");
                     }
                 }
             }
@@ -90,11 +91,6 @@ public class LoginForm extends JDialog {
     }
 
     public static void main(String[] args) {
-        SwingUtilities.invokeLater(new Runnable() {
-            @Override
-            public void run() {
-                new LoginForm(null);
-            }
-        });
+        new LoginForm(null);
     }
 }

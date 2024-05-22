@@ -5,4 +5,5 @@ public class User {
     public String numero;
     public String Mail;
     public String motDePasse;
+    public String photoPath;
 }
